@@ -91,6 +91,10 @@ client.on("message", async (message) => {
     case "!jwprev":
       previous();
       break;
+    case "!jwkick":
+      if(voiceConnection)
+        voiceConnection.disconnect();
+      break;
   }
 });
 
